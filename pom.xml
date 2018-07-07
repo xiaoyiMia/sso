@@ -32,6 +32,11 @@
 			<artifactId>common</artifactId>
 			<version>0.0.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.ting.jsonapi</groupId>
+			<artifactId>json-api</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -108,6 +113,10 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
 				<version>1.5.3</version>
@@ -137,23 +146,11 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-			<plugin>
-				<groupId>org.jooq</groupId>
-				<artifactId>jooq-codegen-maven</artifactId>
-				<dependencies>
-					<dependency>
-						<groupId>com.h2database</groupId>
-						<artifactId>h2</artifactId>
-						<version>${h2.version}</version>
-					</dependency>
-				</dependencies>
-				<configuration>
-					<jdbc>
-						<driver>org.h2.Driver</driver>
-						<url>jdbc:h2:~/yourdatabase</url>
-					</jdbc>
-				</configuration>
-			</plugin>
+			<!-- <plugin> <groupId>org.jooq</groupId> <artifactId>jooq-codegen-maven</artifactId> 
+				<dependencies> <dependency> <groupId>com.h2database</groupId> <artifactId>h2</artifactId> 
+				<version>${h2.version}</version> </dependency> </dependencies> <configuration> 
+				<jdbc> <driver>org.h2.Driver</driver> <url>jdbc:h2:~/yourdatabase</url> </jdbc> 
+				</configuration> </plugin> -->
 		</plugins>
 	</build>
 </project>

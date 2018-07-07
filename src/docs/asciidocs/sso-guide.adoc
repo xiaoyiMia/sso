@@ -1,0 +1,31 @@
+= HuaMusic SSO REST Service API Guide
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+== Email-Password Registration
+
+Register Mars System with Email and Password
+
+=== Request structure
+
+include::{snippets}/email-password-register/http-request.adoc[]
+
+=== Request body
+
+include::{snippets}/email-password-register/request-body.adoc[]
+
+==== Request body fields description
+
+include::{snippets}/email-password-register/request-fields.adoc[]
+
+=== Response body
+
+include::{snippets}/email-password-register/response-body.adoc[]
+
+=== CURL request
+
+include::{snippets}/email-password-register/curl-request.adoc[]
